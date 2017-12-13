@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    cursor: url(images/cursor-solid-small-2.cur), auto;  /*specifies the design for the mouse cursor while the user is on the webpage*/
+}
+a {
+    color: #ff33cc;
+}
+body {
+    background-color: #353535;
+    font-family: arial;
+    color: white;
+    margin: 0px;
+}
+h1 {
+    color: #ff8020;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+.credit-text {
+    font-style: italic;
+}
+.current-page {
+    border: 3px solid #ff8020;
+    border-radius: 10px;
+}
+.dropdown {
+    display: none;  /*set this to display: none; before you work with dropdown menues- that way you can use :hover and change this from display: none; to display: block*/
+    background-color: #454545;
+    background: linear-gradient(#555555, #353535);  /*applies a gradient background*/
+    border: 1px solid #353535;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 5px 30px #000000;
+    text-align: center;
+    margin: auto;
+    width: 62%;
+    position: absolute;  /*aligns the dropdown directly below the link that was hovered over*/
+    top: 125px;  /*these two "top" and "left" commands are to tweak the alignment of the dropdown menu*/
+    left: 400px;
+}
+.dropdown a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff8020;
+    text-decoration: none;
+}
+.dropdown a:hover {  /*when the user hovers over any of the links in the dropdrop down menus*/
+    animation-name: nav-fade;  /*refer to @keyframes at the bottom of this file*/
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards; 
+}
+.dropdown li {
+    list-style-type: none;  /*gets rid of the bullets that come with <li> by default*/
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.intro-image {
+    border: 5px solid #ff8020;
+    border-radius: 15px;
+    margin: 0px auto;
+    display: block;
+    width: 40%;
+}
+.logo {
+    width: 8%;
+    height: 8%;
+    margin: auto auto auto 50px;
+    transform: scale(0.7, 0.7);
+}
+.nav-bar-div {
+    margin: auto auto auto 0px;
+    width: 80%;
+    text-align: center;
+}
+.nav-header {
+    display: flex;
+    background: linear-gradient(#555555, #353535);  /*applies a gradient background*/
+    border: 1px solid #353535;
+    border-radius: 70px 70px 70px 70px;
+    box-shadow: 0px 5px 30px #000000;
+}
+.nav-item {
+    color: #ff8020;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 40px 20px 40px 20px;
+    margin: auto 20px auto 20px;
+    border: 1px solid transparent;  /*border is invisible*/
+    border-radius: 10px;
+}
+.nav-item-div {
+    display: inline;
+}
+.nav-item:hover {  /*this is so that when the user hovers over the navigation links they will fade to a darker color*/
+    animation-name: nav-fade;  /*refer to @keyframes at the bottom of this file*/
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;  /*this is so that the animation pasues on the last frame*/
+}
+.nav-item-custom_cards {
+    display: inline;
+}
+.nav-item-custom_cards:hover > ul {  /*when the user hovers over the Custom Cards link, dropdown appears*/
+    display: block;
+}
+.nav-item-lego_rpg {
+    display: inline;
+}
+.nav-item-lego_rpg:hover > ul {  /*when the user hovers over the Lego RPG link, dropdown appears*/
+    display: block;
+}
+.nav-item-paper_dungeon {
+    display: inline;
+}
+.nav-item-paper_dungeon:hover > ul {  /*when the user hovers over the Paper Dungeon link, dropdown appears*/
+    display: block;
+}
+.subhead {
+    color: #ff8020;
+    font-style: italic;
+}
+.title-div {
+    border: 5px solid #ff8020;
+    border-radius: 15px;
+    width: 30%;
+    margin: auto;
+}
+.title-text {
+    font-weight: bold;
+}
+@keyframes nav-fade {
+    from {color: #ff8020;}
+    to {color: #cc5800;}
+}
+
+
+
+/*just a note: change all pixel mesurement to percentage ones; it will make the whole website scaleable*/
+/*link the website logo to the home page; index.html*/
+/*Dropdown Menu Reference:  http://cssdeck.com/labs/another-simple-css3-dropdown-menu*/
